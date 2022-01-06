@@ -1,9 +1,11 @@
-package Trees;
+package BFS;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+
+import Trees.TreeNode;
 
 /* Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
 
@@ -28,10 +30,10 @@ public class BinaryTreeRightSideView {
 		Queue<TreeNode> q = new LinkedList<>();
 		q.offer(root);
 		while (!q.isEmpty()) {
-			int levelSize = q.size();
-			for (int i = 0; i < levelSize; i++) {
+			int n = q.size();
+			for (int i = 0; i < n; i++) {
 				TreeNode node = q.remove();
-				if (i == levelSize - 1) {  // check if the node is right side node
+				if (i == n - 1) {  // check if the node is the last node of current level
 					result.add(node.val);
 				}
 				if (node.left != null) {

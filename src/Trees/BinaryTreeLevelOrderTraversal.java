@@ -21,6 +21,9 @@ return its level order traversal as:
   [9,20],
   [15,7]
 ]
+
+  Time Complexity - O(N) Since each node is processed exactly once
+  Space Complexity - O(N) To keep the output structure which contains N nodes
  */
 
 public class BinaryTreeLevelOrderTraversal {
